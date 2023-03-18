@@ -75,6 +75,7 @@ db.orders.aggregate([
 ])
 
 ```
+[$lookup in 10 min youTube](https://youtu.be/cuLYt1ODSk4/)
 
 
 ## Documentation
