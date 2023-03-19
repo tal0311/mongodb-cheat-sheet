@@ -16,6 +16,7 @@ db.collection.aggregate([
 ```
 ### Project Fields:
 This command selects or excludes specific fields from the documents in the collection.
+[Array.map()]
 ```
 db.collection.aggregate([
    { $project: { field1: 1, field2: 1 } }
@@ -23,6 +24,7 @@ db.collection.aggregate([
 ```
 ### Sort Documents:
 This command sorts the documents in the collection based on a specified field and in ascending or descending order.
+$sort taks 1/-1 for the order
 ```
 db.collection.aggregate([
    { $sort: { field: 1 } }
@@ -30,6 +32,7 @@ db.collection.aggregate([
 ```
 ### Skip Documents:
 This command skips a specified number of documents from the beginning of the result set.
+with $limit Used for pagination.
 ```
 db.collection.aggregate([
    { $skip: 10 }
