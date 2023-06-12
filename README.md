@@ -39,6 +39,13 @@ db.collection.aggregate([
 ])
 
 ```
+### pagination  
+```
+  const result = await collection.aggregate([
+        { $skip: (pageNumber - 1) * pageSize },
+      { $limit: pageSize }
+    ]).toArray();
+```    
 ### The $in operator   
 is used to match documents where the value of a specified field matches any value in a provided array. 
 [Array.includes()]
