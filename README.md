@@ -87,7 +87,31 @@ db.orders.aggregate([
 ```
 [$lookup in 10 min youTube](https://youtu.be/cuLYt1ODSk4/)
 
+## Insert and extract from Array
+This will be the same as using Array.pop() method
+```
+{
+  "_id": mongoStrId,
+  "fruits": [
+    { "id": 1, "name": "apple" },
+    { "id": 3, "name": "orange" },
+    { "id": 4, "name": "apple" }
+  ]
+}
+db.collection.updateOne(
+  { _id: mongoStrId },
+  { $pull: { fruits: { $elemMatch: { id: 2 } } } }
+);
 
+```
+This will be the same as using Array.push()
+```
+db.collection.updateOne(
+  { _id: 1 },
+  { $push: { fruits: "orange" } }
+);
+
+```
 ## Documentation
 
 [Mongodb docs](https://www.mongodb.com/docs/v5.0/meta/aggregation-quick-reference/)
