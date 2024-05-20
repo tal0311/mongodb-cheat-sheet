@@ -112,6 +112,15 @@ db.collection.updateOne(
 );
 
 ```
+
+##Get updated document
+```
+db.collection.findOneAndUpdate(
+  { _id: ObjectId("your-document-id") }, 
+  { $set: { fieldName: "newValue" } },   
+  { returnDocument: "after" }            
+)
+```
 ## Documentation
 
 [Mongodb docs](https://www.mongodb.com/docs/v5.0/meta/aggregation-quick-reference/)
