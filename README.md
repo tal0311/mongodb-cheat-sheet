@@ -113,7 +113,7 @@ db.collection.updateOne(
 
 ```
 
-##Get updated document
+## Get updated document
 ```
 db.collection.findOneAndUpdate(
   { _id: ObjectId("your-document-id") }, 
