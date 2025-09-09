@@ -71,6 +71,8 @@ This command performs a left outer join between two collections and returns all 
 **foreignField**: Specifies the name of the field from the joining documents. This field is used for the matching operation with the localField.
 
 **as**: Specifies the name of the new array field to be added to the input documents. The joined documents are added to this array as sub-documents.
+
+**pipline**: Use this to loop over items in the lookup. This will replace $unwind and $group 
 ```
 db.orders.aggregate([
    {
@@ -80,6 +82,9 @@ db.orders.aggregate([
            localField: "product_id",
            foreignField: "_id",
            as: "product"
+           pipeline: [
+            { $project: { 'password': 0, 'score': 0 } 
+           ]                
          }
    }
 ])
