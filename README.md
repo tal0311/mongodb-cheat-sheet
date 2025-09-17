@@ -130,6 +130,11 @@ db.collection.findOneAndUpdate(
 ```
  {$set: {"byUser.userId": "$byUser._id" }}
 ```
+
+## Remove fields
+```
+ {$unset: ["byUser._id"]}
+```
 ## Documentation
 
 [Mongodb docs](https://www.mongodb.com/docs/v5.0/meta/aggregation-quick-reference/)
