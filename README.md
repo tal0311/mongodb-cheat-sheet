@@ -1,5 +1,9 @@
 # Mongodb aggregation cheat sheet
 
+To use operator in aggregate use $[operator].
+To get the value of field use '$user' this will give the value of the user.
+To use the key of a field 'user'
+
 ### Match Documents:
 This command filters the documents in the collection based on a given condition or set of conditions.
 ```
