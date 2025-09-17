@@ -126,6 +126,10 @@ db.collection.findOneAndUpdate(
   { returnDocument: "after" }            
 )
 ```
+## Change field name
+```
+ {$set: {"byUser.userId": "$byUser._id" }}
+```
 ## Documentation
 
 [Mongodb docs](https://www.mongodb.com/docs/v5.0/meta/aggregation-quick-reference/)
